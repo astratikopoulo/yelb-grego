@@ -13,5 +13,6 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
 	INSERT INTO restaurants (name, count) VALUES ('bucadibeppo', 0);
 	INSERT INTO restaurants (name, count) VALUES ('chipotle', 0);
 	INSERT INTO restaurants (name, count) VALUES ('ihop', 0);
+	INSERT INTO restaurants (name, count) VALUES ('pks', 0);
 EOSQL
 
