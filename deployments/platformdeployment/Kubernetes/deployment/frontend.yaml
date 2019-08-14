@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: yelb-ui
+  namespace: yelb-prod
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yelb-ui
+        tier: frontend
+        secgroup: web-tier
+    spec:
+      containers:
+      - name: yelb-ui
+        image: mreferre/yelb-ui:0.3
+        ports:
+        - containerPort: 80

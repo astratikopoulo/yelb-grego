@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yelb-db
+  labels:
+    app: yelb-db
+    tier: backenddb
+  namespace: yelb-prod
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5432
+  selector:
+    app: yelb-db
+    tier: backenddb
+    secgroup: db-servers
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: yelb-db
+  namespace: yelb-prod
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yelb-db
+        tier: backenddb
+        secgroup: db-servers
+    spec:
+      containers:
+      - name: yelb-db
+        image: mreferre/yelb-db:0.3
+        ports:
+        - containerPort: 5432
