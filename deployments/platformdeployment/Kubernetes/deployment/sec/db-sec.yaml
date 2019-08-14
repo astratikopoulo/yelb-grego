@@ -26,6 +26,7 @@ spec:
       labels:
         app: yelb-db
         tier: backenddb
+        secgroup: db-servers
     spec:
       containers:
       - name: yelb-db

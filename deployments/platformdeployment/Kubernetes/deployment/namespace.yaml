@@ -1,5 +1,0 @@
-piVersion: v1
-kind: Namespace
-metadata:
-  name: yelb-prod
-  namespace: yelb-prod

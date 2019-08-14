@@ -10,6 +10,7 @@ spec:
       labels:
         app: yelb-ui
         tier: frontend
+        secgroup: web-tier
     spec:
       containers:
       - name: yelb-ui

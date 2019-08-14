@@ -26,6 +26,7 @@ spec:
       labels:
         app: yelb-appserver
         tier: middletier
+        secgroup: app-servers
     spec:
       containers:
       - name: yelb-appserver
