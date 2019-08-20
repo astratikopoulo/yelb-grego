@@ -9,9 +9,9 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
     	count       integer,
     	PRIMARY KEY (name)
 	);
-	INSERT INTO restaurants (name, count) VALUES ('outback', 20);
-	INSERT INTO restaurants (name, count) VALUES ('bucadibeppo', 0);
-	INSERT INTO restaurants (name, count) VALUES ('chipotle', 0);
+	INSERT INTO restaurants (name, count) VALUES ('outback', 2000);
+	INSERT INTO restaurants (name, count) VALUES ('bucadibeppo', 1000);
+	INSERT INTO restaurants (name, count) VALUES ('chipotle', 100);
 	INSERT INTO restaurants (name, count) VALUES ('ihop', 0);
 EOSQL
 
