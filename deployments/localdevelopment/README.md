@@ -2,6 +2,8 @@ This script starts Yelb in development mode.
 
 The workstation you are using must have a bunch of tools installed and ready to use (e.g. git, Docker, Ruby, angular@CLI, etc.).
 
+
+asdasd
 Move to the directory where you want to work and clone the repo:
 
 `git clone https://github.com/mreferre/yelb.git`
